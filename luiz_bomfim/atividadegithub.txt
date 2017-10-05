@@ -1,6 +1,7 @@
 Questão 01. ​ O que é o git?​ ​ Como você definiria o github?
 
-R: Git é um sistema de controle de versão de arquivos. Através deles podemos desenvolver projetos na qual diversas pessoas podem contribuir simultaneamente. 
+ Git - é um Sistema de Controle de Versão, que permite ao programador armazenar diversas cópias de versão do seu
+trabalho, restaurar versões anteriores, sincronizar entre diversos computadores de trabalho e trabalhar colaborativamente com outros programadores. 
 Github - O Github é um serviço web que oferece diversas funcionalidades extras aplicadas ao git. Resumindo, você poderá usar gratuitamente o github para hospedar seus projetos pessoais. 
 
 Questão 02. ​ O que você pôde notar de diferente? Comente.
