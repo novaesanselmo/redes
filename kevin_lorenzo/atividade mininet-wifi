@@ -1,0 +1,68 @@
+questao 1 - O artigo Mininet-WiFi: Emulating Software-Defined Wireless Networks, pois segundo o site www.scholar.google.com.br é o mais citado
+
+questao 2 - após digitarmos sta1 iwconfig, sta2 iwconfig, sta1 ping sta2, teve um atraso de 0.255 ms, e não se perderam pacotes. Depois de digitarmos sta1 iw dev sta1-wlan0 disconnect ocorreu a desconexão de sta1 e depois efetuamos o ping e nenhum pacote foi enviado.
+depois na execução de sta1 iwconfig, sta2 iwconfig e sta1 ping sta2, sta1 foi reconectada e o ping com sta2 retornou atrasos por volta de o.255ms sem perder pacotes.
+
+
+questao 2.2 - A banda disponivel do sta2: 10.6 foi superior a do sta1: 10.5
+
+
+questao 2.3 - 1° parametro sudo mn --wifi --possition --wmediumd
+definiu uma posição para o simulador
+2° parametro mininet-wifi>py sta1 params
+define parametros para o simulador, com informações especificas;
+3° parametro mininet-wifi>py sta1.params
+(position)
+4º parametro mininet-wifi>py sta1.setPosition
+(10.0.0.1)
+5° parametro mininet-wifi> distance sta1 sta2;
+identificando a distance entre sta1 e sta2
+
+
+questao 3.1 - sta3, pois está fora de alcance da rede
+não esta associado ao sta2
+
+questao 3.2 - Foi o utilizado o modelo de propagação International Telecommunication Union (ITU) Propagation Loss Model, c. A distância do ap1 até sta1 é de 5m. Com os parametros lF=0 , nFloors=0 , pL=0 obtivemos signal level de -41dBm.
+
+lF = 1, nFloors = 1, pL = 1, obtivemos -23dBm.
+
+lF = 2, nFloors = 2, pL = 1, obtivemos -26dBm.
+
+lF = 2, nFloors = 2, pL = 2, obtivemos -27dBm.
+
+lF=5, nFloors=5, pL=5 o sinal ficou em -50 dBm.
+
+lF=5, nFloors=1, pL=5 o sinal ficou em -30 dBm.
+
+lF=10, nFloors=1, pL=10 o sinal ficou em -39 dBm. Apesar destes valores a qualidade do link alcançou o máximo(70/70).
+
+lF=10, nFloors=4, pL=10 o sinal ficou em -69 dBm. Link Quality=41/70.
+
+Quanto mais pavimentos ou ambientes (tradução correta?) teremos queda no sinal, e caso o aumento do nFloors seja acompanhado pelos outros parâmetros a queda será mais acentuada, acompanhado de diminuição na qualidade do link.
+
+Conclui-se que à medida que são aumentados, simultaneamente, os valores de IF, nFloors e pL, o nível de sinal diminui, exceto para todos os parâmetros valorados em zero. Caso nFloors seja menor do que os demais parametros a redução do sinal será mais lenta.
+
+
+questao 3.3 - Utilizando os parâmetros adequados pode ser utilizado em qualquer ambiente: Casa, escritório, apartamentos.
+
+Por exemplo: Supondo que os parâmetros para o ambiente de uma casa sejam lF = 1, nFloors = 1, pL = 1 o nível de sinal de -23dBm é excelente.
+
+
+questao 4.1 - nao foi possivel executar o arquivo propagation_model.py executando o comando iperf sta1 sta2. o mesmo deu erro. exception: could not connect to iperf on port 5001.
+
+questao 4.2- é pra determinar se o canal esta disponivel para transmissao de dados, e quando ha dados a serem recebidos.
+
+
+questao 5.1 - 
+
+
+questao 5.2 - mobilidade. uma situação em que uma estação passa por dois pontos de acesso, fazendo com que a estação seja distribuida de um acess point para outro.
+
+
+questao 6.1 - não houve comunicação entre os nós, em ambas as comunicações.
+questao 6.2 -
+questao 6.3 - 
+
+
+
+ 
