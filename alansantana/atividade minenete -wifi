@@ -1,0 +1,82 @@
+
+
+      Alan santana
+
+
+ 01) Em sua opinião, qual a principal publicação científica relacionada ao Mininet-WiFi? Por
+quê? Você pode utilizar o google scholar para identificar os artigos que citam o Mininet-WiFi.
+
+R :   sim , porque terá um maior alcanse de sinal.
+o mininet -wifi : emulating software-defined wireless networks, é o mais completo em informacoes
+diacordo com o site: www.scholar.google.com.br;
+ é o mais citado dentre os demais encontrados (das quase 50 ,citacões).
+
+02.1 ) Qual é o atraso observado entre sta1 e sta2? Houve perda de pacotes no canal?
+Justifique suas respostas de forma objetiva.
+
+R: Apos os comandos "mininet-wifi>stal1 iwconfig", "mininet-wifi>sta2 iwconfig" e "mininet-wifi>sta1 ping sta2", o atraso entre sta1 e sta2 ficou em torno de 0.222 ms, e não ha perca de pacontes, mas, apos efetuado o comando "sta1 iw dev sta1- wlan0 disconnect" teve uma desconexão de sta1 e, então, ao efetuar o ping, nenhum pacote foi enviado. 
+ Após a execução de "miminet-wifi>sta1 iwconfig", "minunet-wifi>sta2 iwconfig" e "mininet-wifi>sta1 ping sta1 foi reconectada e o ping com sta2 retornou atrasos em torno de 0.222 ms sem perca dos pacotes.
+
+2.2 Use a ferramenta iperf para avaliar a banda disponível (Mbps) entre os nós sta1 e sta2.
+
+R: o comando acabou retornando a taxa de transferencia de 10.5 e 10.6 Mbps, entre os nós e o ap.
+
+
+2.3) Faça um simples comentário para cada uma das informações especificadas na lista de
+parâmetros de sta1.
+
+R: A potencia de transmissão (Tx Power) 14dBm; sta1 conecta-se a conexão sem fio wlan0; ip de sta1 10.0.0.1;
+ alcance da rede 62 metros; a frequencia de operacão da rede2.4 Ghz;
+ o modo sem fio 'g' 54 Mbs; Posição (x,y,z) 1,0,0; Canal de operação 1; 
+Indicador de Potência do Sinal Recebido (indicará o nível de potência recebido, ainda que sofra  qualquer perda possível  em sua antena, quanto mais próximo de zero melhor será o sinal) em -30.
+
+
+3.1 ) Um dos nós parece estar incomunicável. Qual é ele e por qual motivo o nó está
+incomunicável? Ele encontra-se associado ao AP1? Tente responder de forma técnica.
+
+R: O nó que nao se comunica é o sta3, este está fora da área de cobertura do ap1.
+ Como o alcance está limitada a 60, metras e o sta3 estar alem desse alcance, essa faixa não haverá comunicação entre ele e o ap1.
+
+
+
+3.2 ) O arquivo acima já vem pré-configurado com um modelo de propagação. Iden-
+tifique um modelo de propagação diferente do configurado e que é suportado pelo Mininet-WiFi
+e então configure esse modelo no código acima. Identifique e descreva abaixo o nível de sinal
+percebido por sta1. Justifique o resultado obtido.
+
+R: Foi o utilizado o modeloi de propagação Internacional Telecomunication Union  (ITU) Propagation Loss Model,c. A distância do ap1 até sta1 é de 5m. com os parametros 1F=0 , nFloors=0 , pL=0 obtivemossignal level de -41dBm.
+1F=1, nFloors =1, pL =1, obtivemos -23dBm. 
+1F=2, nFloors =2, pL =1, obtivemos -26dBm.
+1F=2, nFloors =2, pL =2, obtivemos -27dBm.
+1F=5, nFloors =5, pL =5, o sinal ficou em -50dBm.
+
+1F=5, nFloors =1, pL =5, o sinal ficou em -30dBm.
+1F=10, nFloors =1, pL =10, o sinal ficou em -39dBm. Apesar destes  valores a qualidade do link alcançou o máximo (70/70).
+1F=10, nFloors =4, pL =10, o sinal ficou em -69dBm. Link Quality=41/70.
+
+Quanto mais pavimentado ou ambientes (tradução + ou - correta?) teremos queda no sinal, e caso o aumento do nFloors seja acompanhado pelos outros paramentros a queda será mais acentuada, acompanhado de diminuição  na qualidade do  link.
+Conclui-se que á medida que são aumentados, simultaneamente, os  valores de IF, nFloors e pL, o nível de sinal diminui, exceto para todos os paramentros valores em zero. Caso nFloors seja menor do que os demais paramentros a redução do  sinal será  mais lenta.
+
+
+
+
+
+3.3 ) Em qual(is) tipo(s) de ambiente(s) você utilizaria o modelo escolhido acima? Por
+quê?
+
+R:  Utilizando os paramentros adequados pode ser utilizado em  qualquer ambiente : casa, escritorio, apartamentos,etc.
+Por exemplos: Supondo que os paramentros para  o ambiente de uma casa sejam 1F=1. nFloors = 1,pL = 1 o nivel de sinal de  -23dBm será  muito bom.
+
+
+4.1 ) Utilizando o arquivo propagation_model.py e de forma similar ao exemplo acima,
+utilize o Iperf para mensurar a largura de banda entre dois nós que distam x metros.
+
+R
+
+Questão 4.2: O que seria o CCA Threshold?
+
+
+
+
+
+
