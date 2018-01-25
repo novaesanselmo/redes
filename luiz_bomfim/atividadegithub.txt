@@ -1,0 +1,17 @@
+Questão 01. ​ O que é o git?​ ​ Como você definiria o github?
+
+ Git - é um Sistema de Controle de Versão, que permite ao programador armazenar diversas cópias de versão do seu
+trabalho, restaurar versões anteriores, sincronizar entre diversos computadores de trabalho e trabalhar colaborativamente com outros programadores. 
+Github - O Github é um serviço web que oferece diversas funcionalidades extras aplicadas ao git. Resumindo, você poderá usar gratuitamente o github para hospedar seus projetos pessoais. 
+
+Questão 02. ​ O que você pôde notar de diferente? Comente.
+
+R= é o diretório aparece no repositório
+
+Questão 03. ​ Existe um conceito muito importante no github chamado de ​ branch (ramo em
+inglês). ​'Defina branch no âmbito do github. Por que você utilizaria ​ branches ​ ? Para qual branch
+você enviou seu arquivo? E se quisesse enviar para um novo branch, o que você faria de
+diferente?
+
+Questão 04. ​ Que tipo de informação o git apresenta de forma que te permita saber que há
+diferenças entre branches?
